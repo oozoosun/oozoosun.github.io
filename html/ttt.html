@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS속성 line-height</title>
+    <style>
+        /* reset.css */
+        *{ margin: 0; padding: 0; }
+        /* P요소 그리고 className = shadow */
+        p.shadow{
+            font-weight: bolder;
+            background-color: #000;
+            /* color: #fff; */
+            text-align: center;
+            font-size: 70px;
+            height: 300px;
+            line-height: 200px;
+            letter-spacing: 20px;
+            text-shadow: 0 0 3px #ccc,
+                         0 -5px 5px #ff3,
+                         2px -10px 5px #fd3,
+                         3px -15px 10px #f80,
+                         3px -20px 15px #f20;
+        }
+        p.letter{
+            font-size: 30px;
+            /* letter-spacing: 0; */
+            /* letter-spacing: 20px; */
+            letter-spacing: -10px;
+        }
+        p.word{
+            font-size: 30px;
+            /* word-spacing: 20px; */
+            /* word-spacing: -10px; */
+            word-spacing: -20px;
+        }
+        div{
+            margin: 20px;
+            border: 1px solid #666;
+            border-radius: 20px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            box-shadow: 0 0 3px #888;
+        }
+    </style>
+</head>
+<body>
+    <p class="shadow">HTML</p>
+    <p class="letter">letter-spacing</p>
+    <p class="word">word spacing size</p>
+    <div>BOX</div>
+</body>
+</html>

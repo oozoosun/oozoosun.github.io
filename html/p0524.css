@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* resetr.css */
+*{ margin: 0; padding: 0;}
+
+/* main contents */
+#wrapper{
+    border: 1px solid #888;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 30px;
+    width: 400px;
+}
+p{
+    text-align: center;
+}
+p.login{
+    background-color: #03C75B;
+    color: #fff;
+    margin: 10px 0;
+    padding: 20px 0;
+    font-size: 20px;
+    border-radius: 10px;
+}
+div.text{
+    text-align: center;
+}
+div.text > span{
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #222;
+}
+div.text > span:nth-child(3){
+    border-right: none;
+}

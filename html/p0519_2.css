@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/*reset.css*/
+*{
+    /*여백설정*/
+    margin:0;
+    Padding:0;
+}
+a{ 
+    /*텍스트밑줄*/
+    text-decoration: none;
+    font-style: italic;
+}
+/**************/
+
+body{
+    background-color: antiquewhite;
+}
+span{
+    /*width: 300px;  안적용* xxxx컨텐츠까지만 지정되기때문에*/
+    text-decoration:overline;
+}
+div{
+    width: 60%;
+    color: red;
+    background-color: yellowgreen;
+}
