@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+/*** font ***/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR&family=Orbitron:wght@700&display=swap');
+
+body{
+    height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    perspective: 800px;
+}
+/*** menu-icon ***/
+.menu-icon{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+}
+.icon-on{
+    opacity: 1;
+}
+
+/***** menu-bar *****/
+nav{
+    position: fixed;
+    width: 120px;
+    height: 100%;
+    background-color: #ddd;
+    text-align: center;
+    transform-origin: left center;
+    transform: rotateY(20deg);  /*** 120deg 로 변경 ***/
+    transition: all 1s;
+    z-index: 9;
+    /* opacity: 1; */
+}
+.menu-off{
+    transform: rotateY(120deg);
+    opacity: 0;
+}
+nav > img{
+    width: 50%;
+    margin: 100px auto;
+}
+nav > ul > li{
+    line-height: 3rem;  /*** 폰트**/
+    font-size: 1.2rem;
+}    
+
+/*** main ***/
+main{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    right: 0;
+    transform-origin: right center;
+    transform: rotateY(-10deg);
+    transition: all 1s;
+    z-index: 8;
+}
+main.mainOn{
+    transform: rotateY(0);
+}
+/*** grid section ***/
+main > section{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr); 
+    position: absolute;
+    top: 0;
+    left: 0;   
+    background-color: #444;
+    opacity:0;
+}
+main > section.viewOn{
+    opacity: 1;
+
+}
+main > section.viewOn > p{
+    transform: rotateY(360deg);
+}
+section > p{    
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    transform: rotateY(180deg);/**반바퀴만 돌도록**/
+
+}
+
+/*** box1 ***/
+section.box1 > p:nth-child(1){
+    grid-column: 1 / 3;
+    font-size: 1.5rem;
+}
+section.box1 > p:nth-child(2){
+    background-image: url(./images/m1.jpg);
+    background-position: right center;
+}
+section.box1> p:nth-child(4){
+    background-color: #888;
+}
+section.box1 > p:nth-child(5){
+    background-image: url(./images/m3.jpg);
+}
+section.box1 > p:nth-child(6){
+    background-image: url(./images/m2.jpg);
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+section.box1 > p:nth-child(7){
+    background-image: url(./images/m4.jpg);
+    background-position: center center;
+}
+section.box1 > p:nth-child(10){
+    grid-column: 2 / 4;
+    background-image: url(./images/m5.jpg);
+    background-position: center center;
+}
+
+/*** box2 ***/
+section.box2>p:nth-child(2){
+    background-image: url(./images/w1.jpg); 
+    background-position:center center;  
+}
+
+section.box2>p:nth-child(3){
+    grid-column: 3 / 5;
+    font-size: 2rem;
+}
+
+section.box2>p:nth-child(4){
+    grid-column: 1;
+    grid-row: 2 / 4;
+    background-image: url(./images/w2.jpg);
+    background-position: left top;
+}
+
+section.box2>p:nth-child(5){
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-image: url(./images/w3.jpg);
+    background-position: center center;
+}
+
+section.box2>p:nth-child(6){
+    background-image: url(./images/w4.jpg);
+    background-position: center center;
+}
+section.box2>p:nth-child(7){
+    background: #555;
+}
+section.box2>p:nth-child(8){
+    background-image: url(./images/w5.jpg);
+    background-position: center center;
+}
+section.box2>p:nth-child(9){
+    background: #555;
+}
+section.box2>p:nth-child(10){
+    background-image: url(./images/w6.jpg);
+    background-position: center top;
+}
+
+section.box2>p:nth-child(11){
+    background-image: url(./images/w7.jpg);
+    background-position: center center;
+}
+
+/*** box3 ***/
+section.box3>p:nth-child(1){
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    background-image: url(./images/k1.gif);
+    background-position: center top;
+}
+section.box3>p:nth-child(2){
+    background: #555;
+}
+section.box3>p:nth-child(3){
+    background-image: url(./images/k2.jpg);
+    background-position: center center;
+}
+section.box3>p:nth-child(4){
+    grid-column: 3 / 5;
+    font-size: 1.5rem;
+}
+section.box3>p:nth-child(5){
+    grid-column: 3;
+    grid-row: 3 / 5;
+    background-image: url(./images/k3.jpg);
+    background-position: center top;
+}
+section.box3>p:nth-child(6){
+    background: #777;
+}
+section.box3>p:nth-child(7){
+    background-image: url(./images/k4.jpg);
+    background-position: center center;    
+}
