@@ -39,6 +39,9 @@ nav{
     transform: rotateY(20deg);  /*** 120deg 로 변경 ***/
     transition: all 1s;
     z-index: 9;
+    background-image: url(./images/bg.jpg);
+    background-position: left top;
+    background-size: cover;
     /* opacity: 1; */
 }
 .menu-off{
@@ -52,6 +55,7 @@ nav > img{
 nav > ul > li{
     line-height: 3rem;  /*** 폰트**/
     font-size: 1.2rem;
+    color: #333;
 }    
 
 /*** main ***/
@@ -183,7 +187,7 @@ section.box2>p:nth-child(11){
 section.box3>p:nth-child(1){
     grid-column: 1 / 3;
     grid-row: 1 / 5;
-    background-image: url(./images/k1.gif);
+    background-image: url(./images/k1.png);
     background-position: center top;
 }
 section.box3>p:nth-child(2){
