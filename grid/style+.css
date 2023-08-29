@@ -10,7 +10,7 @@ body{
 #wrapper{
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #000;
     perspective: 800px;
 }
 /*** menu-icon ***/
@@ -55,7 +55,7 @@ nav > img{
 nav > ul > li{
     line-height: 3rem;  /*** 폰트**/
     font-size: 1.2rem;
-    color: #333;
+    color: #000;
 }    
 
 /*** main ***/
@@ -83,7 +83,7 @@ main > section{
     position: absolute;
     top: 0;
     left: 0;   
-    background-color: #444;
+    background-color: #000;
     opacity:0;
 }
 main > section.viewOn{
@@ -114,7 +114,7 @@ section.box1 > p:nth-child(2){
     background-position: right center;
 }
 section.box1> p:nth-child(4){
-    background-color: #888;
+    background-color: #000;
 }
 section.box1 > p:nth-child(5){
     background-image: url(./images/m3.jpg);
@@ -164,14 +164,14 @@ section.box2>p:nth-child(6){
     background-position: center center;
 }
 section.box2>p:nth-child(7){
-    background: #555;
+    background: #000;
 }
 section.box2>p:nth-child(8){
     background-image: url(./images/w5.jpg);
     background-position: center center;
 }
 section.box2>p:nth-child(9){
-    background: #555;
+    background: #000;
 }
 section.box2>p:nth-child(10){
     background-image: url(./images/w6.jpg);
@@ -187,11 +187,11 @@ section.box2>p:nth-child(11){
 section.box3>p:nth-child(1){
     grid-column: 1 / 3;
     grid-row: 1 / 5;
-    background-image: url(./images/k1.png);
+    background-image: url(./images/k1+.gif);
     background-position: center top;
 }
 section.box3>p:nth-child(2){
-    background: #555;
+    background: #000;
 }
 section.box3>p:nth-child(3){
     background-image: url(./images/k2.jpg);
@@ -208,7 +208,7 @@ section.box3>p:nth-child(5){
     background-position: center top;
 }
 section.box3>p:nth-child(6){
-    background: #777;
+    background: #000;
 }
 section.box3>p:nth-child(7){
     background-image: url(./images/k4.jpg);
