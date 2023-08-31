@@ -10,7 +10,7 @@ body{
 #wrapper{
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #033242;
     perspective: 800px;
 }
 /*** menu-icon ***/
@@ -95,7 +95,7 @@ main > section.viewOn > p{
 }
 section > p{    
     background-size: cover;
-    color: #fff;
+    color: #bfbfc1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,14 +110,14 @@ section.box1 > p:nth-child(1){
     font-size: 1.5rem;
 }
 section.box1 > p:nth-child(2){
-    background-image: url(./images/m1.jpg);
+    background-image: url(./images/m1.gif);
     background-position: right center;
 }
 section.box1> p:nth-child(4){
-    background-color: #000;
+    background-color: #2f2f2f;
 }
 section.box1 > p:nth-child(5){
-    background-image: url(./images/m3.jpg);
+    background-image: url(./images/m3.gif);
 }
 section.box1 > p:nth-child(6){
     background-image: url(./images/m2.jpg);
@@ -160,18 +160,18 @@ section.box2>p:nth-child(5){
 }
 
 section.box2>p:nth-child(6){
-    background-image: url(./images/w4.jpg);
+    background-image: url(./images/w4.gif);
     background-position: center center;
 }
 section.box2>p:nth-child(7){
-    background: #000;
+    background: #2f2f2f;
 }
 section.box2>p:nth-child(8){
-    background-image: url(./images/w5.jpg);
+    background-image: url(./images/w5.gif);
     background-position: center center;
 }
 section.box2>p:nth-child(9){
-    background: #000;
+    background: #2f2f2f;
 }
 section.box2>p:nth-child(10){
     background-image: url(./images/w6.jpg);
@@ -191,7 +191,7 @@ section.box3>p:nth-child(1){
     background-position: center top;
 }
 section.box3>p:nth-child(2){
-    background: #000;
+    background: #2f2f2f;
 }
 section.box3>p:nth-child(3){
     background-image: url(./images/k2.jpg);
@@ -208,7 +208,7 @@ section.box3>p:nth-child(5){
     background-position: center top;
 }
 section.box3>p:nth-child(6){
-    background: #000;
+    background: #2f2f2f;
 }
 section.box3>p:nth-child(7){
     background-image: url(./images/k4.jpg);
