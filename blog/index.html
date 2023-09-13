@@ -148,19 +148,19 @@
                 </div>
                 <div class="right">
                     <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxhoFRvrE76PIEMlZgs9oEzHM_NqAYI9tcRwv-69IqzQ6u94pTMzBNU7WLLNkj_cMpzyw/exec">
-                        <div class="form-card" >
+                        <div class="form-card">
                             <label for="name">name</label>
                             <input type="text" id="name" name="name">
                         </div>
                         <div class="form-card">
                             <label for="email">email</label>
-                            <input type="text" id="email">
+                            <input type="text" id="email" name="email">
                         </div>
                         <div class="form-card">
                             <label for="msg">message</label>
                             <textarea id="msg" name="message"></textarea>
                         </div>
-                        <button type="submit">send</button>
+                        <button type="submit">SEND</button>
                         <div class="thankyou_message">
                             <p>빠른 시일 안에 답변드리겠습니다.감사합니다^^*</p>
                             <p class="close">닫기</p>
@@ -173,7 +173,7 @@
     </main>
     <script src="./js/script.js"></script>
     <script src="./js/script_navbg.js"></script>
-    <script data-cfasync="false" src="./js/form-submission-handler.js.js"></script>
+    <script data-cfasync="false" src="./js/form-submission-handler.js"></script>
     <script>
         const elemBtn = document.querySelector('.thankyou_message>p.close');
         elemBtn.addEventListener('click', ()=>{
