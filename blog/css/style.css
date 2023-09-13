@@ -248,12 +248,12 @@ section > .title > h2{
     border: none; 
     color:#fff;
 }
-
+/*** 메일 보내기 확인 후 팝업 ***/
 .contact .right .thankyou_message{
     display: none;
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -263,8 +263,8 @@ section > .title > h2{
 }
 .thankyou_message{
     padding: 5px 10px;
-    background-color: rgba(0,0,0, 0.2) ;
-    color:#fff;
+    background-color: rgb(177, 160, 9);
+    color: #fff;
 }
 /* animation */
 @keyframes blink {
