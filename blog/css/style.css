@@ -59,7 +59,7 @@ nav > .gnb > li{
 }
 header > .home{
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)),url(./images/bg_image.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)),url(../images/bg_image.jpg);
     /* background-color: rgba(128, 255, 0, 0.623); */
     background-size: cover;
     background-position: top center;
