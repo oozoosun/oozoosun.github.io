@@ -116,10 +116,10 @@ header > .home video{
     height: 100%;
     object-fit: cover;
 }
-main{
+/* main{
     padding-bottom: 20px;
     /* margin-bottom: 50px; */
-}
+
 main > section:nth-of-type(even){
     background-color: #ddd;
 }
@@ -173,24 +173,50 @@ main > section *{
     padding: 10px;
     margin-bottom: 30px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
-.features .card:hover{
+.features .card.in *{
+    color: #fff;
+    opacity: 1;
+   
+}
+
+.features .card span{
+    position: absolute;
+    background-color: rgb(249, 3, 110);
+    left:0;
+    top: 0;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+}
+/* .features .card:hover{
     background-color: rgb(152, 144, 245);
 }
 .features .card:hover *{
     color: #fff;
-    }
+    } */
 .features .card i{
     color: rgb(238, 124, 104);
     font-size: 4rem;
+    position: relative;
+    z-index: 5;
 }
 .features .card h3{
     font-size: 2rem;
+    position: relative;
+    z-index: 6;
 }
 .features .card p{
     /* font-size: 1.5rem; */
     color: #666;
     word-break: break-all; 
+    position: relative;
+    z-index: 7;
 }
 /* background fixed */
 .bg{
@@ -203,8 +229,8 @@ main > section *{
 }
 .portfolio .detail{
     position: relative;
-    width: 300px;
     margin: 0 auto;
+    width: 300px;    
     height: 300px;
 }
 
@@ -220,9 +246,15 @@ main > section *{
     left: 0;
 }
 .portfolio .moveBtn i:nth-child(2){
-    left: 90%;
+    left : 90%;
+}
+.portfolio .cardlist{
+    display: block;
+    margin: 0;
+    transform: none;
 }
 .portfolio .card{
+    /**서로겹치기**/
     position: absolute;
     top: 0;
     left: 0;
@@ -333,7 +365,7 @@ main > section *{
     padding: 5px 10px;
     background-color: rgb(118, 122, 248);
     color: #fff;
-
+}
 /* animation */
 @keyframes blink {
     0%{opacity: 1;}
@@ -374,7 +406,6 @@ main > section *{
         width: 100%;
         max-width: 1024px;
         /* margin: 50px auto; */
-        /* margin: 50px auto; */
     }
     /* .about > .detail,
     .features > .detail,
@@ -382,15 +413,15 @@ main > section *{
     .contact > .detail{ */
     .wrapper > .detail{
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-between;        
     }
     .about .detail > img{
         width: 50%;
     }
-    .features .detail > .card,
-    .portfolio .detail > .card
-    {
+    .features .detail > .card{
+    /* .portfolio .detail > .card */
+    
         width: 30%;
     }
     .contact .detail > .left{
@@ -402,5 +433,31 @@ main > section *{
     }
     .contact .detail > .right{
         width: 60%;
+    }
+    /*****portfolio위치재설정***/
+    .portfolio .detail{
+        width: 1000px;
+        height: 450px;
+        overflow: hidden;
+    }
+    .portfolio .card{
+        width: 400px;
+        position: static;
+        opacity: 1;
+    }
+    .portfolio .cardlist{
+        display: flex;
+        gap: 50px;
+        /* position: relative; */
+        margin: 0 100px;
+        transition: 0.5s;
+    }
+    .portfolio .moveBtn i:nth-child(1){
+        top: -250px;
+        left: -30px;
+    }
+    .portfolio .moveBtn i:nth-child(2){
+        top: -250px;
+        left : 100%;
     }
 }
