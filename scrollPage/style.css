@@ -1,132 +1,117 @@
 @charset "utf-8";
 
-/*** reset css ***/
+/*** reset.css ***/
 *{ margin: 0; padding: 0;}
-ul,li{ list-style: none;}
-
-/*** 전체 영역 ***/
-body{
-    height: 100vh;
-    overflow: hidden;
-}
+ul,li{ list-style: none; }
+body{ overflow: hidden;}
 section{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
-/*** 구역 나눠서 표시 ***/
-.sec1{ background-color: orange;}
-.sec2{ background-color: tomato;}
-
-/*** section-1 ***/
-.sec1{
+/*** section1 ***/
+#sec1{ background-color: orange; }
+#sec3{ 
+    background-color: yellowgreen;
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+    transition: 1s;
+}
+#sec1, #sec3{
     display: flex;
-    /* display: none; */
     justify-content: center;
     align-items: center;
 }
-.sec1 > .bg{
-    width: 100%;
-    height: 50vh;
-    /* background-color: tomato; */
-    background: linear-gradient(50deg, rgba(10,30,240,1) 0%, rgba(255,0,74,0.02573529411764708) 70%);    
-    animation: fill 3s ease-in-out;
-    position: relative;
-}
-@keyframes fill {
-    0%{
-        left: -100%;
-        opacity: 0;
-    }
-    100%{
-        left: 0;
-        opacity: 1;
-    }
-}
-.sec1 > p{
-    font-size: 10rem;
-    font-weight: bolder;
-    position: relative;
+#sec1 h1, #sec3 h1{
+    font-size: 14rem;
     z-index: 1;
+    color: transparent;
+    /* background-image: linear-gradient(to right top, rgb(207, 105, 105), rgb(239, 194, 194));
+    -webkit-background-clip: text; */
+    -webkit-text-stroke: 2px #fff;    
+
 }
-.sec1 > .circle{
+#sec1 .circle{
     position: relative;
-    top: -200px;
-    left: -100px;
+    top: -150px;
+    left: -80px;
 }
-.sec1 > .circle > span{
-    display: block;
-    width: 200px;
-    height: 200px;
-    /* background-color: tomato; */
-    border: 1px solid #fff;
-    border-radius: 40% 60% 25% 35% / 40% 45% 35% 60%;
+#sec1 p{
+    background-color: crimson;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
 }
-.sec1 > .circle > span:nth-child(1){
-    animation: zoom 5s linear infinite;
+#sec1 p:nth-child(1){
+    animation: circle 5s linear infinite;
 }
-.sec1 > .circle > span:nth-child(2){
-    animation: zoom 3s ease-in-out reverse infinite;
+#sec1 p:nth-child(2){
+    animation: circle 10s linear infinite;
+    animation-direction: reverse;
 }
-.sec1 > .circle > span:nth-child(3){
-    animation: zoom 10s ease-in infinite;
+#sec1 p:nth-child(3){
+    animation: circle 3s linear infinite;
 }
-@keyframes zoom {
-    0%{
-        /* transform: scale(0.9); */
-        transform: rotate(0);
-    }
-    100%{
-        /* transform: scale(1.5); */
-        transform: rotate(360deg);
-    }
+@keyframes circle {
+    0%{ transform: rotate(0);}
+    100%{ transform: rotate(360deg);}
 }
-/*** section-2 ***/
-.sec2{
-    z-index: 2;
+/* #sec1 i{
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    bottom: 50px;
+} */
+
+/*** section2 ***/
+#sec2{ 
+    background-color: tomato;
     position: absolute;
     top: 100%;
-    transition: top 1s;
+    transition: 1s;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.sec2 > .slider{
-    background-color: #666;
+#sec2 > .slider{
+    /* background-color: #888; */
     height: 300px;
     display: flex;
     align-items: flex-start;
+    color: #fff;
     position: absolute;
-    top: calc(50% - 150px);
-    left: 15%;
+    left: 20%;
 }
-.sec2 > .slider > li{
+#sec2 > .slider > li{
     background-color: #222;
-    height: 100%;
     aspect-ratio: 1/1;
-    margin-right: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    margin: 0 100px;
     position: relative;
 }
-.sec2 > .slider > li:nth-child(2n){ top: -30%;}
-.sec2 > .slider > li:nth-child(3n){ top: 30%; }
-.sec2 > .slider > li > p{
-    color: #fff;
-    font-size: 2rem;
+#sec2 > .slider > li:nth-child(2n){ 
+    top: -30%;
 }
-.sec2 > .indicator{
+#sec2 > .slider > li:nth-child(3n){ 
+    top: 30%;
+}
+#sec2 > .bar{
+    width: 80%;    
+    padding: 2px;
+    border: 1px solid #fff;
     position: absolute;
-    width: 100%;
-    padding: 30px;
-    bottom: 30px;
-    box-sizing: border-box;
+    bottom: 20px;
 }
-.sec2 > .indicator > .bar{
+#sec2 > .bar > .progress{
+    height: 5px;
     width: 0;
-    height: 20px;
-    background-color: #888;
+    background-color: #222;
 }
-
 
