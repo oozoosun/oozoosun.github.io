@@ -14,7 +14,9 @@ section{
     position: absolute;
     top:0;
     left: 0;
-    width: 100%;    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
 }
 .bg-back{
     position: absolute;
@@ -25,7 +27,7 @@ section{
     background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
 }
 #sec3{ 
-    background-color: yellowgreen;
+    background-color: #0da8ba;
     position: absolute;
     top: 100%;
     z-index: 3;
@@ -37,12 +39,13 @@ section{
     align-items: center;
 }
 #sec1 h1, #sec3 h1{
-    font-size: 14rem;
+    font-size: 10rem;
     z-index: 1;
     color: transparent;
     /* background-image: linear-gradient(to right top, rgb(207, 105, 105), rgb(239, 194, 194));
     -webkit-background-clip: text; */
-    -webkit-text-stroke: 2px #fff;    
+    -webkit-text-stroke: 2px #ffffff;    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
 #sec1 .circle{
@@ -84,7 +87,9 @@ section{
 
 /*** section2 ***/
 #sec2{ 
-    background-color: tomato;
+    background-color: #c2405a;
+    /* opacity: 0.3; */
+    /* background-color: tomato; */
     position: absolute;
     top: 100%;
     transition: 1s;
