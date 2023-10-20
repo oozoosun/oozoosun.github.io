@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+html{
+    --bg-color : #fff;
+    --text-color : #222;
+    --link-color : #222;
+}
+html.dark{
+    --bg-color : #222;
+    --text-color: #fff;
+    --link-color: #fff;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+a{
+    color: var(--link-color);
+}

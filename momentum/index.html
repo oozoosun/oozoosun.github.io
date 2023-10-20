@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웨일온</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body{
+            background-size: cover;
+            color: #fff;
+        }
+        h1{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10rem;
+        }
+        h2{ 
+            background-color: rgba(255,255,255,0.5);
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .loginName{
+            display: none;
+        }
+        #loginForm{
+            width: 300px;
+            margin: 10px auto;
+            display: flex;
+        }
+        #loginForm > label{
+            width: 10%;
+            padding: 10px;
+            background-color: #eee;
+            text-align: center;
+            border-radius: 5px 0 0 5px;
+        }
+        #loginForm > input{
+            width: 90%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+            background-color: #eee;
+        }
+        .todo{
+            position: absolute;
+            right: 20px;
+            bottom: 30%;
+            background-color: rgba(255,255,255,0.5);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+        .todo > ul{
+            text-align: left;
+        }
+        .cls-view{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme">Toggle Theme</button>
+    <p class="loginName">Hello</p>
+    <form id="loginForm">
+        <label><i class="fa-regular fa-user"></i></label>
+        <input type="text" placeholder="로그인 이름 입력하세요">
+    </form>
+    <h1 class="clock">00:00:00</h1>
+    <h2>할일목록</h2>
+    <div class="todo">
+        <form id="todoForm">
+            <input type="text" placeholder="할일을 입력하세요">
+        </form>
+        <ul class="todoUl"></ul>
+        <button>닫기</button>
+    </div>
+    <script src="./js/theme.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todos.js"></script>
+    <script src="./js/weather.js"></script>
+</body>
+</html>
