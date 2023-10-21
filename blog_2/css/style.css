@@ -263,8 +263,9 @@ main > section *{
     padding: 15px;
     margin-bottom: 30px;
     transition: 0.5s;
-    cursor: pointer;
+    /* cursor: pointer; */
     opacity: 0;
+    text-align: center;
 }
 .portfolio .card.on{
     opacity: 1;
@@ -281,6 +282,15 @@ main > section *{
 }
 .portfolio .card p{
     font-size: 2rem;
+}
+.portfolio .card button{
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 3px 7px;
+    background-color: rgb(118, 122, 248);
+    color: #fff;
+    cursor: pointer;
 }
 /* contact */
 .contact *{
