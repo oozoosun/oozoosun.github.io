@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 스크롤</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        body{
+            height: 1000vh;
+        }
+        body.before-load{
+            overflow-y: hidden;
+        }
+        .scroll-img{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="before-load">
+    <img class="scroll-img" src="./images/sq/Green_(1).jpg" alt="처음 이미지">      
+    <script>
+        const elemScrollImg = document.querySelector('.scroll-img');
+        const TOTAL_IMAGES = 150;
+        const videoImages = [];
+        let currentImg = 0;
+        const onWinScroll = () => {
+            const {scrollHeight,clientHeight,scrollTop} = document.documentElement;
+            const rate = scrollTop / (scrollHeight-clientHeight);
+            // Math.round(rate*(TOTAL_IMAGES-1))
+            requestAnimationFrame( ()=>{
+                currentImg = Math.round(rate*(TOTAL_IMAGES-1));
+                elemScrollImg.src = videoImages[currentImg].src;
+            } );
+        }
+        const init = () => {            
+            for( let i=1 ; i<=TOTAL_IMAGES; i++ ){
+                let elemImg = new Image();
+                elemImg.src = `./images/sq/Green_(${i}).jpg`;
+                videoImages.push(elemImg);
+            }
+            document.body.classList.remove('before-load');
+            window.addEventListener('scroll',onWinScroll);
+        }
+        window.addEventListener('load',init);
+    </script>  
+</body>
+</html>
